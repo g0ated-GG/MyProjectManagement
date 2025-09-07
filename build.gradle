@@ -2,6 +2,7 @@ plugins {
     id 'io.jmix' version '2.6.1'
     id 'java'
     id 'org.jetbrains.gradle.plugin.idea-ext' version '1.1.9'
+    id 'war'
 }
 
 apply plugin: 'org.springframework.boot'
@@ -12,7 +13,7 @@ jmix {
 }
 
 group = 'com.company'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1'
 
 repositories {
     mavenCentral()
@@ -38,12 +39,12 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    runtimeOnly 'org.hsqldb:hsqldb'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'io.jmix.flowui:jmix-flowui-test-assist'
+    implementation 'org.postgresql:postgresql'
 }
 
 configurations.implementation {
