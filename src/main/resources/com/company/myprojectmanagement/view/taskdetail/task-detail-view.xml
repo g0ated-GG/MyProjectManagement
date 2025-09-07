@@ -37,6 +37,8 @@
             </entityPicker>
             <textArea id="descriptionField" property="description" height="10em" maxLength="500"
                       valueChangeMode="EAGER" trimEnabled="false"/>
+            <fileStorageUploadField id="attachmentField" property="attachment" clearButtonVisible="true"
+                                    fileNameVisible="true" uploadIcon="vaadin:upload" maxFileSize="20000000"/>
         </formLayout>
         <hbox>
             <button id="closeActionButton" action="closeAction"/>

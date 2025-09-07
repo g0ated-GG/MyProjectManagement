@@ -17,7 +17,10 @@
         <dataLoadCoordinator auto="true"/>
     </facets>
     <layout>
+        <image id="avatar" dataContainer="userDc" property="avatar" height="200px" width="200px"/>
         <formLayout id="form" dataContainer="userDc">
+            <fileUploadField id="avatarField" property="avatar" clearButtonVisible="true" fileNameVisible="true"
+                             uploadIcon="vaadin:upload"/>
             <textField id="usernameField" property="username" readOnly="true"/>
             <passwordField id="passwordField"
                            label="msg://com.company.myprojectmanagement.entity/User.password"
